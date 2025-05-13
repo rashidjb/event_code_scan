@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Invalid QR Code{% endblock %}
+    {% block content %}
+        <h1 class="error">❌ Invalid or Expired QR Code</h1>
+        <p>Reason: {{ reason }}</p>
+    {% endblock %}

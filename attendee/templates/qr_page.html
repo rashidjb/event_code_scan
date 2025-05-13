@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+    <h1>Welcome, {{ attendee.first_name }} {{ attendee.last_name }}</h1>
+    <p>Your QR code for {{ event.name }}:</p>
+    <img src="{{ qr_data_uri }}" alt="QR Code" />
+    {% if is_used %}
+        <p style="color: red">This QR code has already been used.</p>
+    {% else %}
+        <p style="color: green">This QR code is valid.</p>
+    {% endif %}
+{% endblock %}

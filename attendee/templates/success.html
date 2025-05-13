@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+    Check-In
+    Successful
+{% endblock %}
+{% block content %}
+    <h1 class="success">✅ Check-In Successful</h1>
+    <p>Welcome, {{ attendee.first_name }} {{ attendee.last_name }}!</p>
+    <p>
+        You have successfully checked in to:
+        <strong>{{ attendee.event.name }}</strong>
+    </p>
+{% endblock %}

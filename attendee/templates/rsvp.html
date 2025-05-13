@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block title %}RSVP for {{ event.name }}
+{%endblock%} {% block content %}
+<h1>RSVP for {{ event.name }}</h1>
+<form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Submit RSVP</button>
+</form>
+{% endblock %}

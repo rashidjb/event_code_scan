@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Event Check-In{% endblock %}</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 2em;
+                background: #f8f8f8;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                background: #fff;
+                padding: 2em;
+                border-radius: 8px;
+            }
+            .success {
+                color: green;
+            }
+            .error {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">{% block content %}{% endblock %}</div>
+    </body>
+</html>
