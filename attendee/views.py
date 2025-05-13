@@ -17,7 +17,7 @@ def attendee_qr_view(request, event_slug, shortcode):
     qr_obj = get_object_or_404(
         QRCode, attendee__event=event, shortcode=shortcode)
 
-    url = f"http://127.0.0.1:8000/events/{event.slug}/checkin/{qr_obj.code}/"
+    url = f"https://orca-app-8jqle.ondigitalocean.app/events/{event.slug}/checkin/{qr_obj.code}/"
     qr = qrcode.make(url)
     buffer = BytesIO()
     qr.save(buffer, format='PNG')
