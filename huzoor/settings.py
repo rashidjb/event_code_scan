@@ -37,6 +37,9 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True  # Also helps with CSRF issues
+
 # Application definition
 
 INSTALLED_APPS = [
